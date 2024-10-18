@@ -1,0 +1,45 @@
+{
+  "name": "@lynet/cli",
+  "version": "1.0.0-rc.1",
+  "description": "Lynet CLI",
+  "bin": {
+    "lynet": "./dist/lynet.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "prepare": "tsup",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "clean": "rm -rf ./dist"
+  },
+  "keywords": [
+    "lynet",
+    "cli"
+  ],
+  "peerDependencies": {
+    "eslint": ">= 8.57.0 || >= 9.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "semver": "^7.6.3",
+    "simple-git": "^3.27.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^20.10.5",
+    "@types/semver": "^7.5.8",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.4.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
